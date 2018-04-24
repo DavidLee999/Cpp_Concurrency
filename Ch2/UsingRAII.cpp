@@ -1,4 +1,5 @@
 #include <thread>
+#include <iostream>
 
 class thread_guard
 {
@@ -42,6 +43,8 @@ void f()
     thread_guard g { t };
 
     do_something_in_current_thread();
+
+    std::cout << some_local_state;
 }
 
 int main()
