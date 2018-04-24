@@ -6,13 +6,13 @@
 #include <iostream>
 
 template<typename Iterator, typename T>
-struct caaumulate_block
+struct accumulate_block
 {
     void operator () (Iterator first, Iterator last, T& result)
     {
         result = std::accumulate(first, last, result);
     }
-}
+};
 
 template<typename Iterator, typename T>
 T parallel_accumulate(Iterator first, Iterator last, T init)
@@ -40,23 +40,24 @@ T parallel_accumulate(Iterator first, Iterator last, T init)
     {
         Iterator block_end = block_start;
         std::advance(block_end, block_size);
-        threads[i] = std::thread { accumulate_block<Iterator, T>(), block_start, block_end, std::ref { results[i] } };
+        threads[i] = std::thread{ accumulate_block<Iterator, T>(), block_start, block_end, std::ref(results[i]) };
 
         block_start = block_end;
     }
 
     accumulate_block<Iterator, T>()(block_start, last, results[num_threads - 1]);
 
-    std::for_each(threads.begin(), threads.end(), std::me,_fn(&std::thread::join));
+    std::for_each(threads.begin(), threads.end(), std::mem_fn(&std::thread::join));
 
+    return std::accumulate(results.begin(), results.end(), init);
 
 }
 
 int main()
 {
     std::vector<int> vi;
-    for (int i = 0; i < 1000; i += 2)
-        vi.push_back(10);
+    for (int i = 0; i < 1000; i++)
+        vi.push_back(i);
 
     int sum = parallel_accumulate(vi.begin(), vi.end(), 0);
 
