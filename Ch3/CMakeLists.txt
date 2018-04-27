@@ -7,3 +7,4 @@ set( CMAKE_CXX_FLAGS "-std=c++11" )
 
 add_executable( UsingMutex UsingMutex.cpp )
 add_executable( UsingLockGuard UsingLockGuard.cpp )
+add_executable( ReferenceOut ReferenceOut.cpp )
