@@ -12,3 +12,10 @@ add_executable( ThreadSafeStack ThreadSafeStack.cpp )
 add_executable( UsingLockOfSwap UsingLockOfSwap.cpp )
 add_executable( HierarchicalMutex HierarchicalMutex.cpp )
 add_executable( UniqueLock UniqueLock.cpp )
+add_executable( LazyInitialization LazyInitialization.cpp )
+
+find_package( Boost COMPONENTS thread REQUIRED )
+include_directories( ${Boost_INCLUDE_DIRS} )
+
+add_executable( SharedMutex SharedMutex.cpp )
+target_link_libraries( SharedMutex ${Boost_LIBRARIES} )
