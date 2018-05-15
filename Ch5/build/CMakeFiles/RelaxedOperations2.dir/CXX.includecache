@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/RelaxedOperations2.cpp
+thread
+-
+atomic
+-
+iostream
+-
+

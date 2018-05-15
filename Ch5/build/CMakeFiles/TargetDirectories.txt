@@ -1,0 +1,6 @@
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/build/CMakeFiles/rebuild_cache.dir
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/build/CMakeFiles/edit_cache.dir
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/build/CMakeFiles/RelaxedOperations2.dir
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/build/CMakeFiles/RelaxedOperations.dir
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/build/CMakeFiles/SequentialConsistency.dir
+/Users/lipenghua/GitHub/Cpp_Concurrency/Ch5/build/CMakeFiles/UnspecifiedOrder.dir

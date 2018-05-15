@@ -7,3 +7,5 @@ set( CMAKE_CXX_FLAGS "-std=c++11")
 
 add_executable( UnspecifiedOrder UnspecifiedOrder.cpp )
 add_executable( SequentialConsistency SequentialConsistency.cpp )
+add_executable( RelaxedOperations RelaxedOperations.cpp )
+add_executable( RelaxedOperations2 RelaxedOperations2.cpp )
